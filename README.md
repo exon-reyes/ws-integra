@@ -1,12 +1,15 @@
 # Protocolo de Despliegue en Entornos Productivos
 
-Este documento describe el procedimiento estandarizado para la compilación, empaquetado y ejecución de los módulos **Front-end (Angular)** y **Back-end (Spring Boot/Java)** en un entorno productivo, garantizando uniformidad, eficiencia y continuidad operativa.
+Este documento describe el procedimiento estandarizado para la compilación, empaquetado y ejecución de los módulos *
+*Front-end (Angular)** y **Back-end (Spring Boot/Java)** en un entorno productivo, garantizando uniformidad, eficiencia
+y continuidad operativa.
 
 ---
 
 ## 1. Materialización del Artefacto de Interfaz de Usuario (Angular)
 
-La compilación del módulo Front-end debe ejecutarse utilizando la configuración de producción, habilitando optimizaciones como *tree-shaking*, *minificación* y variables contextuales dedicadas al entorno.
+La compilación del módulo Front-end debe ejecutarse utilizando la configuración de producción, habilitando
+optimizaciones como *tree-shaking*, *minificación* y variables contextuales dedicadas al entorno.
 
 ### **Comando de compilación (Front-end)**
 
@@ -48,12 +51,13 @@ target/NOMBRE_EJECUTABLE.jar
 
 ## 3. Ejecución del Servicio y Optimización de la JVM
 
-Una vez generado el artefacto, el servicio Back-end debe iniciarse aplicando parámetros optimizados de la **Java Virtual Machine (JVM)** para asegurar estabilidad y uso eficiente de memoria, especialmente bajo carga.
+Una vez generado el artefacto, el servicio Back-end debe iniciarse aplicando parámetros optimizados de la **Java Virtual
+Machine (JVM)** para asegurar estabilidad y uso eficiente de memoria, especialmente bajo carga.
 
 ### **Parámetros críticos de la JVM**
 
 | Parámetro                       | Valor | Descripción                                                                |
-| ------------------------------- | ----- | -------------------------------------------------------------------------- |
+|---------------------------------|-------|----------------------------------------------------------------------------|
 | `-Xms512m`                      | 512MB | Asignación inicial de memoria para un arranque estable.                    |
 | `-Xmx2g`                        | 2GB   | Límite máximo de heap para soportar picos de tráfico.                      |
 | `-XX:+UseG1GC`                  | -     | Activación del Garbage Collector G1, recomendado para latencia predecible. |

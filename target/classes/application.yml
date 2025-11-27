@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: integra
+  profiles:
+    active: dev
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,metrics,prometheus,caches
+      base-path: /actuator
+  metrics:
+    enable:
+      cache: true
+    tags:
+      application: ${spring.application.name}
+      environment: ${spring.profiles.active}
+  endpoint:
+    prometheus:
+      enabled: true
+    health:
+      show-details: always

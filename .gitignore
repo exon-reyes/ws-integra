@@ -28,3 +28,5 @@ hs_err_pid*
 /src/main/resources/jwt-private.key
 /src/main/resources/application.properties
 /src/main/resources/certs/
+/src/test/
+/.idea/
