@@ -21,3 +21,10 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+/src/main/resources/application-dev.yml
+/src/main/resources/application.yml
+/src/main/resources/app-config.yml
+/src/main/resources/jwt-public.key
+/src/main/resources/jwt-private.key
+/src/main/resources/application.properties
+/src/main/resources/certs/
